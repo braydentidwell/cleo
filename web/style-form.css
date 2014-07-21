@@ -1,0 +1,189 @@
+.cleo-form {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+}
+
+.cleo-form-title {
+    font-size: 2.5em;
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 0px 0px 25px 0px;
+    color: #3D5C99;
+}
+
+.cleo-form-col {
+    width: 50%;
+    float: left;
+}
+
+.cleo-form-row {
+    width: 100%;
+    float: left;
+}
+
+.cleo-form input, 
+.cleo-form label {
+    display: block;
+}
+
+.cleo-form input {
+    margin-top: 5px;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    line-height: 1.5;
+    font-size: 1.4em;
+    padding: 5px 10px;
+    color: #000000;
+}
+
+.cleo-form label {
+    margin-top: 15px;
+    padding: 0px 5px 5px 2px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.cleo-form-col input,
+.cleo-form-col label {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.cleo-form-row input,
+.cleo-form-row label {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+.cleo-form input:focus,
+.cleo-form label:active + input {
+    outline: none;
+    border: 1px solid #476BB2;
+}
+
+.cleo-form-submit-wrapper {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.cleo-form-submit {
+    background-color: #84A663;
+    border: 1px solid #8F8F8F !important;
+    padding: 5px 50px 5px 50px !important;
+    color: white !important;
+}
+
+.cleo-form-submit:hover {
+    background-color: #9DB882;
+    cursor: pointer;
+}
+
+.cleo-form-subtext {
+    display: block;
+    margin-top: 10px;
+    font-size: .8em !important;
+    color: #8F8F8F;
+}
+
+.cleo-form-subtext a        { color: #3D5C99 !important; }
+.cleo-form-subtext a:link   { color: #3D5C99 !important; }
+.cleo-form-subtext a:hover  { color: #9EAECC !important; }
+
+.cleo-form-title div.cleo-form-subtext{
+    font-size: .5em !important;
+}
+
+.cleo-form-error-wrapper {
+    visibility: hidden;
+}
+
+.cleo-form-error {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    padding: 0px 0px 0px 10px;
+    border: 2px solid red;
+    font-style: italic;
+    color: #B20000;
+}
+
+.cleo-form-success {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    padding: 0px 0px 0px 10px;
+    border: 2px solid green;
+    font-style: italic;
+    color: #009900;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    font-style: italic;
+    font-size: .9em;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-style: italic;
+    font-size: .9em;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-style: italic;
+    font-size: .9em;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-style: italic;
+    font-size: .9em;
+}
+
+@media screen and (max-width: 70em) {
+
+    .cleo-form-row input,
+    .cleo-form-row label {
+        width: 90%;
+    }
+
+    .cleo-form-col {
+        display: block;
+        width: 100%;
+    }
+
+    .cleo-form-submit input{
+        margin: 0 auto 0 auto;
+    }
+}
+
+@media screen and (max-width: 48em) {
+
+    .cleo-form {
+        width: 100%;
+    }
+
+    .cleo-form-title {
+        margin-left: 10px;
+    }
+
+    .cleo-form-submit {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cleo-form-subtext {
+        margin-left: 10px;
+        margin-top: 30px;
+    }
+}
