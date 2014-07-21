@@ -40,6 +40,10 @@ $(document).ready(function () {
 
 	// --Topbar Buttons--
 	$("#toggle-sidebar").click(function() { toggleSidebar(); });
+	$("#acct-menu").css('left', $(window).width() - $("#acct-menu").width());
+	$("#account-options").hover(function(){ $("#acct-menu").css('visibility', 'visible'); });
+	$("#acct-menu").mouseleave(function(){ $("#acct-menu").css('visibility', 'hidden'); });
+	$("#topbar-right-actions").mouseleave(function(){ $("#acct-menu").css('visibility', 'hidden'); });
 
 	/*** Sidebar properties ***/
 	// Resize the sidebar
@@ -56,6 +60,7 @@ $(window).resize(function () {
 	// Position the middle topbar container element and the pushpin icon within it.
 	$("#topbar-middle-actions").css('left', ($(window).width() / 2) - ($("#topbar-middle-actions").width() / 2));
 	$("#pushpin-container").css('left', $("#pushpin-placeholder").offset().left);
+	$("#acct-menu").css('left', $(window).width() - $("#acct-menu").width() - 10);
 
 	// Resize the map.
 	resizeMap();

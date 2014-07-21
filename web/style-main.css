@@ -39,9 +39,9 @@ a {color: black; text-decoration: none;}
 	text-align: justify;
 	z-index: 2;
 	border-bottom: 2px solid #6A854F;
-	font-family: helvetica;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
 	color: white;
-	font-size: 15px;
+	font-size: 1em;
 }
 
 .topbar-component {
@@ -72,19 +72,19 @@ a {color: black; text-decoration: none;}
 	float: right;
 }
 
-#topbar-right-actions a.topbar-action{
+#topbar-right-actions div.topbar-action{
 	margin-left: 10px;
 }
 
-#my-account-button {
-	font-family: helvetica;
+#topbar-right-actions a,
+#topbar-right-actions div.topbar-action{
 	color: white;
-	font-weight: bold;
+	font-weight: normal;
 }
 
-#my-account-button a{ color: white !important; }
-#my-account-button a:link{ color: white !important; }
-#my-account-button a:hover{ color: white !important; }
+#topbar-right-actions a { color: white !important; }
+#topbar-right-actions a:link { color: white !important; }
+#topbar-right-actions a:hover { color: #C2EBFF !important; }
 
 .topbar-action {
 	display: inline-block;
@@ -93,6 +93,23 @@ a {color: black; text-decoration: none;}
 	border: 0px dashed black;
 	color: white;
 	font-weight: bold;
+}
+
+#acct-menu {
+	position: absolute;
+	width: 120px;
+	top: 50px;
+	right: 500px;
+	background-color: #A9C192;
+	border: 2px solid #6A854F;
+	visibility: hidden;
+}
+
+.acct-menu-item {
+	display: block;
+	text-align: right;
+	padding: 3px 5px 3px 5px;
+	font-size: .9em;
 }
 
 #generic-topbar {

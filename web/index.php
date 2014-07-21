@@ -29,24 +29,28 @@
 					<a href="index.php" class="topbar-action">Map</a>
 					<a href="#" class="topbar-action" id="notifications-button">Adv. Search</a>
 					<div id="pushpin-placeholder" class="topbar-action"></div>
-					<a href="#" class="topbar-action" id="my-account-button">F.A.Q.</a>
-					<a href="#" class="topbar-action" id="my-account-button">About Cleo</a>
+					<a href="#" class="topbar-action">F.A.Q.</a>
+					<a href="#" class="topbar-action">About Cleo</a>
 					<span class="stretch"></span>
 				</div>
 				<div id="pushpin-container"><a href="#"><img src="img/pins/pin.png" id="pin-button" /></a></div>
 				<div class="topbar-component" id="topbar-right-actions">
-					<a href="#" class="topbar-action" id="notifications-button">(Notifications)</a>
-					<a href="#" class="topbar-action" id="my-account-button">
+					<div class="topbar-action" id="notifications-button"><a href="#">(notifs)</a></div>
+					<div class="topbar-action" id="account-actions">
 						<?php
 							// Redirect to the home page if the user is logged in.
 							if(isset($_SESSION["cleo_usr"])){
-								echo("+ " . $_SESSION["cleo_usr"]["fst"] . " " . $_SESSION["cleo_usr"]["lst"]);
+								echo("<a href='#' id=\"account-options\">+ " . $_SESSION["cleo_usr"]["fst"] . " " . $_SESSION["cleo_usr"]["lst"] . "</a>");
 							}
 							else{
-								echo "<a href=\"login.php\">Log In</a> | <a href=\"register.php\">Sign Up</a>";
+								echo "<a href=\"register.php\">sign up</a> | <a href=\"login.php\">log in</a>";
 							}
 						?>
-					</a>
+					</div>
+					<div id="acct-menu">
+						<div class="acct-menu-item"><a href="../model/accounts/pcs_logout.php">account settings</a></div>
+						<div class="acct-menu-item"><a href="../model/accounts/pcs_logout.php">log out</a></div>
+					</div>
 					<span class="stretch"></span>
 				</div>
 			</div>
