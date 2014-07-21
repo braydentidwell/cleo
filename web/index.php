@@ -48,7 +48,7 @@
 						?>
 					</div>
 					<div id="acct-menu">
-						<div class="acct-menu-item"><a href="../model/accounts/pcs_logout.php">account settings</a></div>
+						<div class="acct-menu-item"><a href="#">account settings</a></div>
 						<div class="acct-menu-item"><a href="../model/accounts/pcs_logout.php">log out</a></div>
 					</div>
 					<span class="stretch"></span>
