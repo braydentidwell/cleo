@@ -6,6 +6,8 @@ $(function(){
 		// Prevent the form from actually submitting.
 		e.preventDefault();
 
+		$(".cleo-form-error-wrapper").html("");
+
 		// TODO process the form.
 		$.ajax({
 			url: "../model/accounts/pcs_create_account.php",
@@ -44,6 +46,8 @@ $(function(){
 
 		// Prevent the form from actually submitting.
 		e.preventDefault();
+
+		$(".cleo-form-error-wrapper").html("");
 
 		// TODO process the form.
 		$.ajax({
