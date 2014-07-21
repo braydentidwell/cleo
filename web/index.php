@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+	session_name("cleo_usr");
+	session_start();
+?>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="style-main.css">
@@ -32,7 +36,17 @@
 				<div id="pushpin-container"><a href="#"><img src="img/pins/pin.png" id="pin-button" /></a></div>
 				<div class="topbar-component" id="topbar-right-actions">
 					<a href="#" class="topbar-action" id="notifications-button">(Notifications)</a>
-					<a href="#" class="topbar-action" id="my-account-button">(My Account)</a>
+					<a href="#" class="topbar-action" id="my-account-button">
+						<?php
+							// Redirect to the home page if the user is logged in.
+							if(isset($_SESSION["cleo_usr"])){
+								echo("+ " . $_SESSION["cleo_usr"]["fst"] . " " . $_SESSION["cleo_usr"]["lst"]);
+							}
+							else{
+								echo "<a href=\"login.php\">Log In</a> | <a href=\"register.php\">Sign Up</a>";
+							}
+						?>
+					</a>
 					<span class="stretch"></span>
 				</div>
 			</div>

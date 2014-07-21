@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<?php
+	session_name("cleo_usr");
+	session_start();
+
+	// Redirect to the home page if the user is logged in.
+	if(isset($_SESSION["cleo_usr"])){
+		header("Location: index.php");
+	}
+?>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="style-main.css">

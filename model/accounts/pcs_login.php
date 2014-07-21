@@ -12,7 +12,7 @@
 	// Check if a user is already logged in.
 	if(isset($_SESSION['cleo_usr'])){
 		$returnInfo[":status"] = 1;
-		$returnInfo[":content"] = "You are already logged in as " . $_SESSION['cleo_usr'];
+		$returnInfo[":content"] = "You are already logged in with " . $_SESSION['cleo_usr']["email"];
 		die(json_encode($returnInfo));
 	}
 	 
@@ -30,7 +30,7 @@
 	$returnInfo[":content"] = attemptLogin($db, $_POST['email'], $_POST['password']);
 	
 	// Start the loggedin PHP session.
-	$_SESSION['cleo_usr'] = $_POST['email'];
+	$_SESSION['cleo_usr'] = ["email" => $_POST['email'], "fst" => $returnInfo[":content"][':firstname'], "lst" => $returnInfo[":content"][':lastname']];
 
 	echo(json_encode($returnInfo));
 	

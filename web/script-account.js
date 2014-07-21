@@ -34,6 +34,7 @@ $(function(){
 				}
 			},
 			error: function(data){
+				displayFormError("An unexpected error has occurred. Please try again.");
 				console.log("An unexpected error has occurred.");
 				console.log(data);
 			},
@@ -70,6 +71,7 @@ $(function(){
 				}
 			},
 			error: function(data){
+				displayFormError("An unexpected error has occurred. Please try again.");
 				console.log("An unexpected error has occurred.");
 				console.log(data);
 			},

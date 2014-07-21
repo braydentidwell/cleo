@@ -68,10 +68,23 @@ a {color: black; text-decoration: none;}
 }
 
 #topbar-right-actions {
-	width: 210px;
-	margin: 0px 10px 0px 0px;
+	margin: 0px 15px 0px 0px;
 	float: right;
 }
+
+#topbar-right-actions a.topbar-action{
+	margin-left: 10px;
+}
+
+#my-account-button {
+	font-family: helvetica;
+	color: white;
+	font-weight: bold;
+}
+
+#my-account-button a{ color: white !important; }
+#my-account-button a:link{ color: white !important; }
+#my-account-button a:hover{ color: white !important; }
 
 .topbar-action {
 	display: inline-block;
