@@ -1,8 +1,8 @@
-<!DOCTYPE html>
 <?php
 	session_name("cleo_usr");
 	session_start();
 ?>
+<!DOCTYPE html>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="style-main.css">
