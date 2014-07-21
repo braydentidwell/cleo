@@ -8,6 +8,12 @@ $(function(){
 
 		$(".cleo-form-error-wrapper").html("");
 
+		// Do an initial screening of the email addresses.
+		if(!isValidEmail($("#cleo-reg-email1").val()) || !isValidEmail($("#cleo-reg-email2").val())){
+			displayFormError("Please enter a valid email address.");
+			return;
+		}
+
 		// TODO process the form.
 		$.ajax({
 			url: "../model/accounts/pcs_create_account.php",
@@ -98,4 +104,9 @@ function displayFormSuccess(message){
 	);
 
 	$(".cleo-form-error-wrapper").css('visibility', 'visible');
+}
+
+function isValidEmail(email){
+	var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	return regex.test(email);
 }

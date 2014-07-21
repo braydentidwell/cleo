@@ -30,7 +30,7 @@
 	$returnInfo[":content"] = attemptLogin($db, $_POST['email'], $_POST['password']);
 	
 	// Start the loggedin PHP session.
-	$_SESSION['cleo_usr'] = ["email" => $_POST['email'], "fst" => $returnInfo[":content"][':firstname'], "lst" => $returnInfo[":content"][':lastname']];
+	$_SESSION['cleo_usr'] = ["email" => htmlspecialchars($_POST['email']), "fst" => $returnInfo[":content"][':firstname'], "lst" => $returnInfo[":content"][':lastname']];
 
 	echo(json_encode($returnInfo));
 	
