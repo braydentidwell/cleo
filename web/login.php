@@ -30,7 +30,7 @@
 				<?php
 					if(isset($_GET['form_message'])){
 						echo	"<div class=\"cleo-form-row cleo-form-error-wrapper\" style=\"visibility: visible\">" .
-									"<div class=\"cleo-form-success\">" . $_GET['form_message'] . "</div>" .
+									"<div class=\"cleo-form-success\">" . htmlspecialchars($_GET['form_message']) . "</div>" .
 								"</div>";
 					}
 					else{ echo "<div class=\"cleo-form-row cleo-form-error-wrapper\"></div>"; }
