@@ -6,7 +6,7 @@ $(function(){
 		// Prevent the form from actually submitting.
 		e.preventDefault();
 
-		$(".cleo-form-error-wrapper").html("");
+		displayLoaderOnForm();
 
 		// Do an initial screening of the email addresses.
 		if(!isValidEmail($("#cleo-reg-email1").val()) || !isValidEmail($("#cleo-reg-email2").val())){
@@ -54,7 +54,7 @@ $(function(){
 		// Prevent the form from actually submitting.
 		e.preventDefault();
 
-		$(".cleo-form-error-wrapper").html("");
+		displayLoaderOnForm();
 
 		// TODO process the form.
 		$.ajax({
@@ -72,6 +72,10 @@ $(function(){
 				}
 				// Success!
 				else{
+
+					// Display a success message.
+					displayFormSuccess("Success!");
+
 					// Redirect to the login page.
 					document.location.href = "index.php";
 				}
@@ -101,6 +105,21 @@ function displayFormSuccess(message){
 	// Append an error message to the form body.
 	$(".cleo-form-error-wrapper").html(
 		"<div class=\"cleo-form-success\">" + message + "</div>"
+	);
+
+	$(".cleo-form-error-wrapper").css('visibility', 'visible');
+}
+
+function displayLoaderOnForm(){
+
+	$(".cleo-form-error-wrapper").html(
+		"<div class='loader'>" +
+			"<div class='d1'></div>" +
+			"<div class='d2'></div>" +
+			"<div class='d3'></div>" +
+			"<div class='d4'></div>" +
+			"<div class='d5'></div>" +
+		"</div>"
 	);
 
 	$(".cleo-form-error-wrapper").css('visibility', 'visible');
